@@ -14,11 +14,13 @@ router.all('/*', (req, res, next) => {
 });
 
 router.get('/', ensureAuthenticated, (req, res) => {
-    Post.find().then(posts => {
-        Category.find().then(categories => {
-            res.render('admin/posts', { posts, categories });
+    Post.find()
+        .populate('category')
+        .then(posts => {
+            Category.find().then(categories => {
+                res.render('admin/posts', { posts, categories });
+            });
         });
-    });
 });
 
 router.get('/create', ensureAuthenticated, (req, res) => {
@@ -29,15 +31,16 @@ router.get('/create', ensureAuthenticated, (req, res) => {
 
 });
 
-router.get('/my-posts', ensureAuthenticated, (req, res) => {
-    Post.find({ user: req.user.id })
+router.get('/my-posts', (req, res) => {
+
+    Post.find({ user: req.params.id })
         .populate('category')
         .then(posts => {
-            res.render('admin/posts/my-posts', { posts: posts });
-        }).catch(err => {
-            console.log('data not found', err);
-        })
-})
+
+            res.render('admin/posts/my-posts', { posts });
+        });
+
+});
 
 router.post('/create', ensureAuthenticated, (req, res) => {
 
