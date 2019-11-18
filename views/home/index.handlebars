@@ -1,0 +1,54 @@
+<div class="col-md-9 col-md-offset-3">
+    <div class="posts">
+        <div class="posts-inner list-layout">
+
+            {{#each posts}}
+
+            <article class="post">
+                <div class="post-media" style="background-image: url(/uploads/{{file}})">
+                    <a href="/post/{{slug}}">
+                        <img src="/uploads/{{file}}" alt="Post">
+                    </a>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <h2 class="title">
+                            <a href="/post/{{slug}}">Creativity is more than a song and dance act</a>
+                        </h2>
+
+                        <!-- Post Details -->
+                        <div class="post-details">
+                            <div class="post-cat">
+                                <a href="{{category._id}}">{{ category.name }}</a>
+                            </div>
+                            <a href="#" class="post-date"><span>{{generateDate date 'MMMM D, YYYY'}}</span></a>
+
+                        </div>
+                        <!-- End Post Details -->
+                    </div>
+                    <!-- The Content -->
+                    <div class="the-excerpt">
+                        <p>{{{ trimString  body }}}
+                        </p>
+                    </div>
+                    <!-- End The Content -->
+                    <div class="read-more">
+                        <a href="/post/{{slug}}">Continue Reading ...</a>
+                    </div>
+                </div>
+
+            </article>
+
+            {{/each}}
+        </div>
+
+
+        <!-- Pagination -->
+        <div class="pagination-wrap">
+            <div class="newer">
+                {{#paginate current=current pages=pages}}{{/paginate}}
+            </div>
+        </div>
+        <!-- End Pagination -->
+    </div>
+</div>

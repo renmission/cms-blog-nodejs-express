@@ -1,0 +1,49 @@
+<div class="col-md-9 col-md-offset-3">
+    <div class="posts">
+        <div class="posts-inner">
+
+            <article class="post">
+                <h5 class="card-title text-center">Sign Up</h5>
+                <form method="post" action="/register" class="contact" style="margin-top: 10px;">
+                    <div class="contact-item">
+                        <label for="inputFirstname">First Name *</label>
+                        <input value="{{firstName}}" name="firstName" type="text" id="inputFirstname" required
+                            autofocus>
+                    </div>
+
+                    <div class="contact-item">
+                        <label for="inputFirstname">Last Name *</label>
+                        <input value="{{lastName}}" name="lastName" type="text" id="inputLastName" required>
+                    </div>
+
+
+                    <div class="contact-item">
+                        <label for="inputFirstname">Email *</label>
+                        <input value="{{email}}" name="email" type="email" id="inputEmail" required>
+                    </div>
+
+                    <div class="contact-item">
+                        <label>Password *</label>
+                        <input name="password" type="password" id="inputPassword">
+                    </div>
+
+                    <div class="contact-item">
+                        <label>Confirm Password *</label>
+                        <input name="passwordConfirm" type="password" id="inputConfirmPassword" required>
+
+                    </div>
+
+
+                    <div class="contact-item form-submit">
+                        <input name="submit" type="submit" id="submit" class="submit" value="Submit">
+                    </div>
+                </form>
+
+                <hr class="my-4">
+                <a class="d-block text-center mt-2 small" href="/login">Sign In</a>
+            </article>
+
+
+        </div>
+    </div>
+</div>

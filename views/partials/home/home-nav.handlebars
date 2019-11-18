@@ -1,0 +1,88 @@
+<div class="col-md-3">
+    <div class="header affix">
+        <div class="table">
+            <div class="table-cell">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo-light.png" alt="Logo" class="logo-light">
+                        <img src="/images/logo.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Logo -->
+
+                <!-- Navigation -->
+                <div class="main-menu">
+                    <nav>
+                        <ul class="menu-list">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+
+                            {{#each categories}}
+                            <li>
+                                <a href="/">{{name}}</a>
+                            </li>
+                            {{/each}}
+
+                            <hr class="my-4">
+                            {{#if user}}
+                            <li>
+                                <a href="/admin">admin</a>
+                            </li>
+                            <li>
+                                <a href="/logout">logout</a>
+                            </li>
+
+                            {{else}}
+
+                            <li>
+                                <a href="/login">Login</a>
+                            </li>
+                            <li>
+                                <a href="/register">Sign Up</a>
+                            </li>
+
+                            {{/if}}
+                        </ul>
+                    </nav>
+                </div>
+                <!-- End Navigation -->
+
+                <!-- Socials -->
+                <div class="socials">
+                    <a href="#" title="Behance">
+                        <i class="fa fa-behance"></i>
+                    </a>
+                    <a href="#" title="Dribbble">
+                        <i class="fa fa-dribbble"></i>
+                    </a>
+                    <a href="#" title="Facebook">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" title="Google Plus">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a href="#" title="Instagram">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="#" title="Search this site">
+                        <i class="fa fa-search"></i>
+                    </a>
+                </div>
+                <!-- End Socials -->
+
+                <div class="box-search">
+                    <form role="search" method="get" action="#">
+                        <input type="text" placeholder="Search ..." name="s" />
+                    </form>
+                </div>
+
+                <div class="copyright">
+                    <p>Copyright &copy; 2019 by Route</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

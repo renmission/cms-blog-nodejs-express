@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Route</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" href="images/favicon.html" sizes="32x32" />
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700%7CCrete+Round' type='text/css'
+        media='all' />
+
+    <link rel="stylesheet" type="text/css" href="/css/libs/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/libs/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+
+
+</head>
+
+<body>
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <br>
+
+
+
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Wrapper Site -->
+    <div id="main-content">
+
+        <!-- Preload -->
+        <div id="preload">
+            <div class="kd-bounce">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <!-- Preload -->
+
+        <!-- Mobile Menu -->
+        <div class="mobile">
+            <div class="container">
+                <!-- Mobile -->
+                <div class="menu-mobile">
+                    <span class="item item-1"></span>
+                    <span class="item item-2"></span>
+                    <span class="item item-3"></span>
+                </div>
+                <!-- End Mobile -->
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo-mobile.png" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+        </div>
+        <div class="hide-menu"></div>
+        <!-- End Mobile Menu -->
+
+        <div class="container">
+            <div class="row">
+
+                {{> home/home-nav }}
+
+                <div class="col-md-9 col-md-offset-3">
+                    <div class="posts">
+                        <div class="posts-inner">
+
+                            {{> home/form-msgs}}
+
+                        </div>
+                    </div>
+                </div>
+
+                {{{ body }}}
+
+            </div>
+        </div>
+    </div>
+    <!-- End Wrapper Site -->
+
+
+
+
+    <!-- Scripts -->
+    <script src="/js/libs/jquery-1.12.4.min.js"></script>
+    <script src="/js/libs/masonry.pkgd.min.js"></script>
+    <script src="/js/libs/imagesloaded.pkgd.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <!-- End Scripts -->
+
+</body>
+
+</html>

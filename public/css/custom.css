@@ -1,0 +1,6 @@
+.pagination-li {
+    list-style: none;
+    display: inline-block;
+    padding: 1rem;
+    font-size: 13px;
+}

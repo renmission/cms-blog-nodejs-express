@@ -1,0 +1,62 @@
+<aside class="col-lg-4">
+
+
+    <!-- Widget [Search Bar Widget]-->
+    <div class="widget search">
+        <header>
+            <h3 class="h6">Search the blog</h3>
+        </header>
+        <form action="#" class="search-form">
+            <div class="form-group">
+                <input type="search" placeholder="What are you looking for?">
+                <button type="submit" class="submit"><i class="icon-search"></i></button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- Widget [Latest Posts Widget]        -->
+    <div class="widget latest-posts">
+        <header>
+            <h3 class="h6">Latest Posts</h3>
+        </header>
+        <div class="blog-posts">
+
+            {{#each posts}}
+            <a href="/post/{{id}}">
+                <div class="item d-flex align-items-center">
+                    <div class="image"><img src="/uploads/{{file}}" alt="..." class="img-fluid"></div>
+                    <div class="title"><strong>{{title}}</strong>
+                        <div class="d-flex align-items-center">
+                            <div class="views"><i class="icon-eye"></i> 500</div>
+                            <div class="comments"><i class="icon-comment"></i>12</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {{/each}}
+
+
+        </div>
+    </div>
+
+
+    <!-- Widget [Categories Widget]-->
+    <div class="widget categories">
+        <header>
+            <h3 class="h6">Categories</h3>
+        </header>
+
+
+        {{!-- <div class="item d-flex justify-content-between"><a href="#"></a><span>12</span></div> --}}
+
+
+
+    </div>
+
+
+
+
+
+</aside>
